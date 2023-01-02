@@ -10,9 +10,9 @@ jobs:
   test:
     environment: TEST
     env:
-      MONGODB_CLUSTER_ADDRESS: ${{ env.MONGODB_CLUSTER_ADDRESS }}
-      MONGODB_USERNAME: ${{ env.MONGODB.USERNAME }}
-      MONGODB_PASSWORD: ${{ env.MONGODB.PASSWORD }}
+      MONGODB_CLUSTER_ADDRESS: ${{ secrets.MONGODB_CLUSTER_ADDRESS }}
+      MONGODB_USERNAME: ${{ secrets.MONGODB.USERNAME }}
+      MONGODB_PASSWORD: ${{ secrets.MONGODB.PASSWORD }}
       PORT: 8000
     runs-on: ubuntu-latest
     steps:
